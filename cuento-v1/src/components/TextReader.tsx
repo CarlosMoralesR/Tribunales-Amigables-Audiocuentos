@@ -19,17 +19,15 @@ function TextReader({ text }: TextReaderProps) {
     setUtterance(utterance);
   }, [text]);
 
-  useEffect(() => {
-    if (!synth || !utterance) return;
-    synth.speak(utterance);
-    if (isPlaying) {
-      synth.resume();
-    } else {
-      synth.pause();
-    }
-  }, [isPlaying, synth, utterance]);
-
   function handleButtonClick() {
+    if (!synth || !utterance) return;
+
+    if (isPlaying) {
+      synth.pause();
+    } else {
+      synth.speak(utterance);
+      synth.resume();
+    }
     setIsPlaying(!isPlaying);
   }
 

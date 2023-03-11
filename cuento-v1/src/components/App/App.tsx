@@ -1,5 +1,5 @@
 import "./App.css";
-import papasItzel from "./assets/papasitzel.png";
+import papasItzel from "../../assets/papasitzel.png";
 import Carousel from "../Carousel";
 import TextReader from "../TextReader";
 
