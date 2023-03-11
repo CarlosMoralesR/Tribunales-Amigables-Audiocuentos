@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CenterMode } from "./components/CenterMode/CenterMode.js";
+import { CenterMode } from "./CenterMode/CenterMode.js";
 
 function Carousel() {
   return (

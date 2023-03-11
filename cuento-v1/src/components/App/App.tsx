@@ -1,8 +1,7 @@
-import { useState } from "react";
 import "./App.css";
 import papasItzel from "./assets/papasitzel.png";
-import Carousel from "./Carousel";
-import TextReader from "./TextReader";
+import Carousel from "../Carousel";
+import TextReader from "../TextReader";
 
 function App() {
   const text =
