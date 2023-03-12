@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 
 interface TextReaderProps {
   text: string;
+  onBgChange: (newBgColor: string) => void;
 }
 
-function TextReader({ text }: TextReaderProps) {
+function TextReader(props: TextReaderProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [synth, setSynth] = useState<SpeechSynthesis | null>(null);
   const [utterance, setUtterance] = useState<SpeechSynthesisUtterance | null>(
@@ -13,20 +14,22 @@ function TextReader({ text }: TextReaderProps) {
 
   useEffect(() => {
     const synth = window.speechSynthesis;
-    const utterance = new SpeechSynthesisUtterance(text);
+    const utterance = new SpeechSynthesisUtterance(props.text);
     utterance.voice = synth.getVoices()[0];
     setSynth(synth);
     setUtterance(utterance);
-  }, [text]);
+  }, [props.text]);
 
   function handleButtonClick() {
     if (!synth || !utterance) return;
 
     if (isPlaying) {
       synth.pause();
+      props.onBgChange("");
     } else {
       synth.speak(utterance);
       synth.resume();
+      props.onBgChange("#FFB6C1");
     }
     setIsPlaying(!isPlaying);
   }
