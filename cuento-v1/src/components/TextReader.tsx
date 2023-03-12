@@ -42,8 +42,13 @@ function TextReader(props: TextReaderProps) {
           rel="stylesheet"
         />
       </header>
-      <button onClick={handleButtonClick}>
-        <span className="material-icons">
+      <button className="w-full" onClick={handleButtonClick}>
+        <span
+          className={`material-icons text-4xl ${
+            isPlaying ? "text-[#f58d9d]" : "text-green-400"
+          }`}
+          style={{ fontSize: "48px" }}
+        >
           {isPlaying ? "pause_circle" : "play_circle"}
         </span>
       </button>

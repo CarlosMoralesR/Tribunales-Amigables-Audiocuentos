@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "./slick.css";
 import "./slick-theme.css";
 import { useState } from "react";
+import imagen from "../../assets/papasitzel.png";
 
 export const CenterMode = () => {
   const settings = {
@@ -27,12 +28,10 @@ export const CenterMode = () => {
       <button onClick={sliderRef?.slickPrev}>
         <span className="material-icons">chevron_left</span>
       </button>
-      <button onClick={sliderRef?.slickNext}>
-        <span className="material-icons">chevron_right</span>
-      </button>
       <Slider ref={setSliderRef} {...settings}>
         <div>
           <h3>1</h3>
+          {/* <img src={imagen} alt="" /> */}
         </div>
         <div>
           <h3>2</h3>
@@ -50,6 +49,9 @@ export const CenterMode = () => {
           <h3>6</h3>
         </div>
       </Slider>
+      <button onClick={sliderRef?.slickNext}>
+        <span className="material-icons">chevron_right</span>
+      </button>
     </div>
   );
 };
