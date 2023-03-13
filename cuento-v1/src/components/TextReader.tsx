@@ -47,7 +47,7 @@ function TextReader(props: TextReaderProps) {
           className={`material-icons text-4xl ${
             isPlaying ? "text-[#f58d9d]" : "text-green-400"
           }`}
-          style={{ fontSize: "48px" }}
+          style={{ fontSize: "65px" }}
         >
           {isPlaying ? "pause_circle" : "play_circle"}
         </span>
