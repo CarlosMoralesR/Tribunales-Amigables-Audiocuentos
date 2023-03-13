@@ -57,7 +57,9 @@ function TextReader(props: TextReaderProps) {
       <button className="w-full" onClick={handleButtonClick}>
         <span
           className={`material-icons text-4xl ${
-            isPlaying ? "text-[#f58d9d]" : "text-green-400"
+            isPlaying
+              ? "text-[#f58d9d] hover:text-[#f7778a]"
+              : "text-green-400 hover:text-green-500"
           }`}
           style={{ fontSize: "65px" }}
         >

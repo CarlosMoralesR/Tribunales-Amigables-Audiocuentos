@@ -53,13 +53,13 @@ export const CenterMode = () => {
         </div>
         <button
           onClick={sliderRef?.slickPrev}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-blue-100"
+          className="absolute top-1/2 left-0 transform -translate-y-1/2 rounded-sm bg-blue-100 hover:bg-blue-200 hover:shadow-lg"
         >
           <span className="material-icons">chevron_left</span>
         </button>
         <button
           onClick={sliderRef?.slickNext}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-blue-100"
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 rounded-sm bg-blue-100 hover:bg-blue-200 hover:shadow-lg"
         >
           <span className="material-icons">chevron_right</span>
         </button>
