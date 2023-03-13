@@ -18,6 +18,11 @@ function TextReader(props: TextReaderProps) {
     utterance.voice = synth.getVoices()[0];
     setSynth(synth);
     setUtterance(utterance);
+
+    utterance.addEventListener("end", () => {
+      setIsPlaying(false);
+      props.onBgChange("");
+    });
   }, [props.text]);
 
   function handleButtonClick() {
