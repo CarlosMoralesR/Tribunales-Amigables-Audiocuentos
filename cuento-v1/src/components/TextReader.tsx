@@ -23,6 +23,10 @@ function TextReader(props: TextReaderProps) {
       setIsPlaying(false);
       props.onBgChange("");
     });
+
+    return () => {
+      synth.cancel();
+    };
   }, [props.text]);
 
   function handleButtonClick() {
@@ -32,8 +36,11 @@ function TextReader(props: TextReaderProps) {
       synth.pause();
       props.onBgChange("");
     } else {
-      synth.speak(utterance);
-      synth.resume();
+      if (!synth.speaking) {
+        synth.speak(utterance);
+      } else {
+        synth.resume();
+      }
       props.onBgChange("#FFB6C1");
     }
     setIsPlaying(!isPlaying);
