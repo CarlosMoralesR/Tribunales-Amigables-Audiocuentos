@@ -29,7 +29,7 @@ export const CenterMode = () => {
         />
       </header>
       <div className="relative" style={{ height: "100%" }}>
-        <div className="w-full h-full ">
+        <div className="w-full h-full hover:cursor-pointer">
           <Slider ref={setSliderRef} {...settings}>
             <div className="w-full h-full">
               <img className="p-1" src={imagen} alt="" />
