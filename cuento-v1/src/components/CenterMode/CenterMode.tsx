@@ -31,23 +31,24 @@ export const CenterMode = () => {
       <div className="relative" style={{ height: "100%" }}>
         <div className="w-full h-full hover:cursor-pointer">
           <Slider ref={setSliderRef} {...settings}>
+            {/* para el otro tamaño que es mas grande, quitarle las clases a la imagen */}
             <div className="w-full h-full">
-              <img className="p-1" src={imagen} alt="" />
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
             </div>
             <div className="w-full h-full">
-              <img className="p-1" src={imagen2} alt="" />
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen2} alt="" />
             </div>
             <div className="w-full h-full">
-              <img className="p-1" src={imagen} alt="" />
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
             </div>
             <div className="w-full h-full">
-              <img className="p-1" src={imagen2} alt="" />
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen2} alt="" />
             </div>
             <div className="w-full h-full">
-              <img className="p-1" src={imagen} alt="" />
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
             </div>
             <div className="w-full h-full">
-              <img className="p-1" src={imagen2} alt="" />
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen2} alt="" />
             </div>
           </Slider>
         </div>
