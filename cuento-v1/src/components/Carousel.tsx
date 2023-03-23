@@ -2,7 +2,7 @@ import { CenterMode } from "./CenterMode/CenterMode.js";
 
 function Carousel() {
   return (
-    <div className="w-full h-full my-auto">
+    <div className="flex w-full h-full my-auto">
       <CenterMode></CenterMode>
     </div>
   );

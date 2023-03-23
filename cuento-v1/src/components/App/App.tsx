@@ -2,6 +2,7 @@ import "./App.css";
 import imagen from "../../assets/papasitzel.png";
 import Carousel from "../Carousel";
 import TextReader from "../TextReader";
+import TextImage from "../TextImage";
 import { useState } from "react";
 
 function App() {
@@ -15,15 +16,7 @@ function App() {
   return (
     <div className="h-screen flex flex-col">
       <div className="h-5/6 flex flex-row p-1 bg-[#f5d7b0]">
-        <div className="flex-1 flex text-center items-center p-10 font-sans font-bold text-2xl">
-          <p style={{ backgroundColor: bgColor }}>{text}</p>
-        </div>
-        <div
-          className="bg-contain bg-center bg-no-repeat flex-1"
-          style={{
-            backgroundImage: `url(${imagen})`,
-          }}
-        ></div>
+        <TextImage text={text} imagen={imagen} bgColor={bgColor}></TextImage>
       </div>
       <div className="bg-[#f5d7b0]">
         <TextReader text={text} onBgChange={changeBgColor} />
