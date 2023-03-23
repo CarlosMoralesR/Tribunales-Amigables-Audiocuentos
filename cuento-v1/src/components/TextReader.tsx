@@ -47,7 +47,7 @@ function TextReader(props: TextReaderProps) {
   }
 
   return (
-    <div className="h-full w-1/12 flex justify-center">
+    <div className="h-1/6 w-1/12 flex justify-center">
       <header>
         <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
