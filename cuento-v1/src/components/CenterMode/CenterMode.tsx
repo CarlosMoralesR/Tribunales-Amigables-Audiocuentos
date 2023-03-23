@@ -21,6 +21,7 @@ export const CenterMode = () => {
   const [sliderRef, setSliderRef] = useState<any>(null);
 
   return (
+    // si se quita el h-full se ve toda la imagen
     <div className="w-full h-full">
       <header>
         <link

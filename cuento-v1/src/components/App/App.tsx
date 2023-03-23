@@ -25,9 +25,10 @@ function App() {
           }}
         ></div>
       </div>
-      <hr />
-      <div className="h-1/6 flex bg-gray-50">
+      <div className="bg-[#f5d7b0]">
         <TextReader text={text} onBgChange={changeBgColor} />
+      </div>
+      <div className="h-1/6 flex bg-gray-50">
         <Carousel />
       </div>
     </div>
