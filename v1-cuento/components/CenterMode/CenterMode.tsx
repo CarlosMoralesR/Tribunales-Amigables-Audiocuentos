@@ -1,9 +1,11 @@
+"use client";
 import Slider from "react-slick";
 
-import "./slick.css";
-import "./slick-theme.css";
+import "./slick.module.css";
+import "./slick-theme.module.css";
 import { useState } from "react";
-import imagen from "../../assets/intro.png";
+import Image from "next/image";
+import imagen from "../../assets/papasitzel.png";
 import imagen2 from "../../assets/herramientas.png";
 
 export const CenterMode = () => {
@@ -33,10 +35,18 @@ export const CenterMode = () => {
           <Slider ref={setSliderRef} {...settings}>
             {/* para el otro tamaño que es mas grande, quitarle las clases a la imagen */}
             <div className="w-full h-full">
-              <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
+              <Image
+                className="w-3/6 h-1/2 mx-auto"
+                src={imagen}
+                alt=""
+              ></Image>
             </div>
             <div className="w-full h-full">
-              <img className="w-3/6 h-1/2 mx-auto" src={imagen2} alt="" />
+              <Image
+                className="w-3/6 h-1/2 mx-auto"
+                src={imagen2}
+                alt=""
+              ></Image>
             </div>
             <div className="w-full h-full">
               <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
