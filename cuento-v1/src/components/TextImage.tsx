@@ -29,14 +29,41 @@ function TextImage({
         <span className="material-icons text-white">chevron_left</span>
       </button>
 
-      <div className="w-5/10 overflow-visible flex-1 flex text-center items-center p-10 font-sans font-bold text-2xl">
-        <p className="" style={{ backgroundColor: bgColor }}>
-          {text}
-        </p>
+      <div className="w-full flex-1 flex flex-col items-center justify-center text-center p-8 font-sans font-bold text-2xl">
+        <div>
+          {pageData.heading ? (
+            <h1
+              className="text-blue-300 p-2"
+              style={{ backgroundColor: bgColor }}
+            >
+              {pageData.heading}{" "}
+            </h1>
+          ) : (
+            ""
+          )}
+
+          <p
+            className={`w-full h-full text-sm overflow-auto md:text-lg  ${
+              image ? "xl:text-xl" : "xl:text-2xl"
+            }`}
+            style={{ backgroundColor: bgColor }}
+          >
+            {text}
+          </p>
+        </div>
       </div>
-      <div className="w-5/10 bg-contain bg-center bg-no-repeat flex-1 my-auto">
-        <img className="" src={image} alt="image-cuento" />
-      </div>
+      {image ? (
+        <div className="w-full h-full bg-contain bg-center bg-no-repeat flex flex-1 justify-center items-center">
+          <img
+            className="object-contain h-full w-full"
+            src={image}
+            alt="image-cuento"
+          />
+        </div>
+      ) : (
+        ""
+      )}
+
       <button
         // funcionalidad para que se regrese a la primera pagina al estar en la ultima
         // onClick={() => setCurrentPage((currentPage + 1) % arrayLength)}

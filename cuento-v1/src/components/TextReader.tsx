@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 interface TextReaderProps {
   text: string;
   onBgChange: (newBgColor: string) => void;
+  currentPage: number;
 }
 
 function TextReader(props: TextReaderProps) {
@@ -47,25 +48,32 @@ function TextReader(props: TextReaderProps) {
   }
 
   return (
-    <div className="h-1/6 w-1/12 flex justify-center">
+    <div className="h-1/6 w-full flex">
       <header>
         <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
         />
       </header>
-      <button className="w-full" onClick={handleButtonClick}>
-        <span
-          className={`material-icons text-4xl ${
-            isPlaying
-              ? "text-[#f58d9d] hover:text-[#f7778a]"
-              : "text-green-400 hover:text-green-500"
-          }`}
-          style={{ fontSize: "65px" }}
-        >
-          {isPlaying ? "pause_circle" : "play_circle"}
-        </span>
-      </button>
+      <div className="w-full my-auto">
+        <button onClick={handleButtonClick}>
+          <span
+            className={`material-icons text-4xl ${
+              isPlaying
+                ? "text-[#f58d9d] hover:text-[#f7778a]"
+                : "text-green-400 hover:text-green-500"
+            }`}
+            style={{ fontSize: "65px" }}
+          >
+            {isPlaying ? "pause_circle" : "play_circle"}
+          </span>
+        </button>
+      </div>
+      <div className="w-full flex justify-end my-auto">
+        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-black text-white">
+          {props.currentPage}
+        </div>
+      </div>
     </div>
   );
 }
