@@ -17,6 +17,7 @@ function TextReader(props: TextReaderProps) {
     const synth = window.speechSynthesis;
     const utterance = new SpeechSynthesisUtterance(props.text);
     utterance.voice = synth.getVoices()[0];
+    utterance.rate = 1.2;
     setSynth(synth);
     setUtterance(utterance);
 
