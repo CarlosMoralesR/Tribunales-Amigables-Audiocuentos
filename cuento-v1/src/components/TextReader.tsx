@@ -30,6 +30,14 @@ function TextReader(props: TextReaderProps) {
     };
   }, [props.text]);
 
+  useEffect(() => {
+    if (isPlaying && synth && utterance) {
+      synth.cancel();
+      setIsPlaying(false);
+      props.onBgChange("");
+    }
+  }, [props.text]);
+
   function handleButtonClick() {
     if (!synth || !utterance) return;
 
