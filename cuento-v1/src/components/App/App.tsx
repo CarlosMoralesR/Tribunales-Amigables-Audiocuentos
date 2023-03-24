@@ -26,6 +26,7 @@ function App() {
       y las niñas, son materiales que no pueden tocarse porque están
       en nuestra imaginación pero que nos alejan de situaciones que
       pueden ponernos en peligro o ayudarnos a estar a salvo.`,
+      voice: 0,
     },
     {
       pageNumber: 2,
@@ -43,6 +44,7 @@ function App() {
       ponerse a salvo del peligro.
       Ahora que ya conoces esto ¡Comencemos con el cuento!`,
       image: pagina2,
+      voice: 0,
     },
     {
       pageNumber: 3,
@@ -52,6 +54,7 @@ function App() {
       Itzel platicaba con su hermana mayor llamada Montse, al
       mismo tiempo que se preparaba para ir a la escuela.`,
       image: pagina3,
+      voice: 0,
     },
     {
       pageNumber: 4,
@@ -71,6 +74,7 @@ function App() {
       ir a la escuela Itzel? Recuerda que yo te quiero
       mucho y que puedes confiar en mí`,
       image: pagina4,
+      voice: 4,
     },
     {
       pageNumber: 5,
@@ -80,6 +84,7 @@ function App() {
       poner un candado para cerrar el paso a la
       comunicación con Montse?`,
       image: pagina5,
+      voice: 9,
     },
   ];
   const [bgColor, setBgColor] = useState("");
@@ -108,6 +113,7 @@ function App() {
           }
           onBgChange={changeBgColor}
           currentPage={pageDataArray[currentPage].pageNumber}
+          voice={pageDataArray[currentPage].voice}
         />
       </div>
       <div className="h-1/6 flex bg-gray-50">

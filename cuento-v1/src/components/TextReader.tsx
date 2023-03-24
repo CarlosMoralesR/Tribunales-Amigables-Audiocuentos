@@ -4,6 +4,7 @@ interface TextReaderProps {
   text: string;
   onBgChange: (newBgColor: string) => void;
   currentPage: number;
+  voice: number;
 }
 
 function TextReader(props: TextReaderProps) {
@@ -15,9 +16,13 @@ function TextReader(props: TextReaderProps) {
 
   useEffect(() => {
     const synth = window.speechSynthesis;
+    window.speechSynthesis.onvoiceschanged = () => {
+      utterance.voice = synth.getVoices()[props.voice];
+    };
     const utterance = new SpeechSynthesisUtterance(props.text);
-    utterance.voice = synth.getVoices()[0];
-    utterance.rate = 1.2;
+    utterance.voice = synth.getVoices()[props.voice];
+    // aumentar velocidad
+    // utterance.rate = 1.2;
     setSynth(synth);
     setUtterance(utterance);
 
