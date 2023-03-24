@@ -1,10 +1,18 @@
+interface TextImageProps {
+  pageData: any;
+  arrayLength: number;
+  currentPage: number;
+  setCurrentPage: (page: number) => void;
+  bgColor: string;
+}
+
 function TextImage({
   pageData,
   arrayLength,
   currentPage,
   setCurrentPage,
   bgColor,
-}: any) {
+}: TextImageProps) {
   const { text, image } = pageData;
 
   return (

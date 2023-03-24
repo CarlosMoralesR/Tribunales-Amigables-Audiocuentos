@@ -4,7 +4,6 @@ import "./slick.css";
 import "./slick-theme.css";
 import { useState } from "react";
 import imagen from "../../assets/intro.png";
-import imagen2 from "../../assets/pagina2.png";
 
 export const CenterMode = () => {
   const settings = {
@@ -37,19 +36,19 @@ export const CenterMode = () => {
               <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
             </div>
             <div className="w-full h-full">
-              <img className="w-3/6 h-1/2 mx-auto" src={imagen2} alt="" />
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
             </div>
             <div className="w-full h-full">
               <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
             </div>
             <div className="w-full h-full">
-              <img className="w-3/6 h-1/2 mx-auto" src={imagen2} alt="" />
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
             </div>
             <div className="w-full h-full">
               <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
             </div>
             <div className="w-full h-full">
-              <img className="w-3/6 h-1/2 mx-auto" src={imagen2} alt="" />
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
             </div>
           </Slider>
         </div>
