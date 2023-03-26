@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "./slick.css";
 import "./slick-theme.css";
 import { useState } from "react";
+import imagen from "../../assets/intro.png";
 
 export const CenterMode = () => {
   const settings = {
@@ -13,43 +14,45 @@ export const CenterMode = () => {
     centerPadding: "60px",
     slidesToShow: 3,
     speed: 500,
+    focusOnSelect: true,
+    // variableWidth: true,
   };
-  const [sliderRef, setSliderRef] = useState(null);
+  const [sliderRef, setSliderRef] = useState<any>(null);
 
   return (
-    <div style={{ width: "100%" }}>
+    // si se quita el h-full se ve toda la imagen
+    <div className="w-full h-full">
       <header>
         <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
         />
       </header>
-      <button onClick={sliderRef?.slickPrev}>
-        <span className="material-icons">chevron_left</span>
-      </button>
-      <button onClick={sliderRef?.slickNext}>
-        <span className="material-icons">chevron_right</span>
-      </button>
-      <Slider ref={setSliderRef} {...settings}>
-        <div>
-          <h3>1</h3>
+      <div className="relative" style={{ height: "100%" }}>
+        <div className="w-full h-full hover:cursor-pointer">
+          <Slider ref={setSliderRef} {...settings}>
+            {/* para el otro tamaño que es mas grande, quitarle las clases a la imagen */}
+            <div className="w-full h-full">
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
+            </div>
+            <div className="w-full h-full">
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
+            </div>
+            <div className="w-full h-full">
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
+            </div>
+            <div className="w-full h-full">
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
+            </div>
+            <div className="w-full h-full">
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
+            </div>
+            <div className="w-full h-full">
+              <img className="w-3/6 h-1/2 mx-auto" src={imagen} alt="" />
+            </div>
+          </Slider>
         </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
+      </div>
     </div>
   );
 };

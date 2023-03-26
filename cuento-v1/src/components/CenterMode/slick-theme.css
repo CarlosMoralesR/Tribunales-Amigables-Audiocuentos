@@ -179,6 +179,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .slick-dots li.slick-active button:before {
+  width: 100%;
+  height: 100%;
   opacity: 0.75;
   color: black;
 }
