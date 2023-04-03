@@ -37,30 +37,48 @@ function TextImage({
         <span className="material-icons text-white">chevron_left</span>
       </button>
 
-      <div className="w-full flex-1 flex flex-col items-center justify-center text-center p-8 font-sans font-bold text-2xl">
-        <div>
-          {pageData.heading ? (
-            <h1
-              className="text-blue-300 p-2"
-              style={{ backgroundColor: bgColor }}
-            >
-              {pageData.heading}{" "}
-            </h1>
+      {text || pageData.specialText ? (
+        <div className="w-full flex-1 flex flex-col items-center justify-center text-center p-8 font-sans font-bold text-2xl">
+          <div>
+            {pageData.heading ? (
+              <h1
+                className="text-blue-300 p-2"
+                style={{ backgroundColor: bgColor }}
+              >
+                {pageData.heading}{" "}
+              </h1>
+            ) : (
+              ""
+            )}
+          </div>
+          {pageData.specialText ? (
+            <div>
+              <h1
+                className="text-blue-800 p-2"
+                style={{ backgroundColor: bgColor }}
+              >
+                <span className="material-icons text-blue-700">warning</span>
+                {pageData.specialText}{" "}
+              </h1>
+            </div>
           ) : (
             ""
           )}
+          <div className="overflow-auto">
+            <p
+              className={`w-full h-full text-sm overflow-auto md:text-base lg:text-lg xl:text-xl  ${
+                image ? "xl:text-xl" : "xl:text-2xl"
+              }`}
+              style={{ backgroundColor: bgColor }}
+            >
+              {text}
+            </p>
+          </div>
         </div>
-        <div className="overflow-auto">
-          <p
-            className={`w-full h-full text-sm overflow-auto md:text-base lg:text-lg xl:text-xl  ${
-              image ? "xl:text-xl" : "xl:text-2xl"
-            }`}
-            style={{ backgroundColor: bgColor }}
-          >
-            {text}
-          </p>
-        </div>
-      </div>
+      ) : (
+        ""
+      )}
+
       {image ? (
         <div className="w-full h-full bg-contain bg-center bg-no-repeat flex flex-1 justify-center items-center">
           <img
