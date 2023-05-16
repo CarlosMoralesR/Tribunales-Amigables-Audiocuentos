@@ -28,10 +28,10 @@ function TextImage({
           }
         }}
         disabled={currentPage === 0}
-        className={`absolute top-1/3 left-0 transform -translate-y-1/2 rounded-sm bg-gray-400 ${
+        className={`absolute top-1/3 h-24 left-0 transform -translate-y-1/2 rounded-sm bg-red-400 ${
           currentPage === 0
             ? "cursor-not-allowed disabled"
-            : "hover:bg-gray-500 hover:shadow-lg"
+            : "hover:bg-red-500 hover:shadow-lg"
         }`}
       >
         <span className="material-icons text-white">chevron_left</span>
@@ -100,10 +100,10 @@ function TextImage({
           }
         }}
         disabled={currentPage === arrayLength - 1}
-        className={`absolute top-1/3 right-0 transform -translate-y-1/2 rounded-sm bg-gray-400 ${
+        className={`absolute top-1/3 h-24 right-0 transform -translate-y-1/2 rounded-sm bg-red-400 ${
           currentPage === arrayLength - 1
             ? "cursor-not-allowed disabled"
-            : "hover:bg-gray-500 hover:shadow-lg"
+            : "hover:bg-red-500 hover:shadow-lg"
         }`}
       >
         <span className="material-icons text-white">chevron_right</span>
