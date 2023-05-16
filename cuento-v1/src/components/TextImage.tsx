@@ -42,7 +42,7 @@ function TextImage({
           <div>
             {pageData.heading ? (
               <h1
-                className="text-blue-300 p-2"
+                className="text-blue-400 p-2"
                 style={{ backgroundColor: bgColor }}
               >
                 {pageData.heading}{" "}
