@@ -75,7 +75,7 @@ function TextReader(props: TextReaderProps) {
             className={`material-icons text-4xl ${
               isPlaying
                 ? "text-[#f58d9d] hover:text-[#f7778a]"
-                : "text-green-400 hover:text-green-500"
+                : "text-green-500 hover:text-green-600"
             }`}
             style={{ fontSize: "65px" }}
           >
@@ -84,7 +84,7 @@ function TextReader(props: TextReaderProps) {
         </button>
       </div>
       <div className="w-full flex justify-end my-auto">
-        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-black text-white">
+        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-500 text-black font-semibold">
           {props.currentPage}
         </div>
       </div>
