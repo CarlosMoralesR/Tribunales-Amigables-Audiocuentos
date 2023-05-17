@@ -1,9 +1,26 @@
 import { CenterMode } from "./CenterMode/CenterMode.js";
 
-function Carousel() {
+interface CarouselProps {
+  currentPage: number;
+  setCurrentPage: (page: number) => void;
+  sliderRef: any;
+  changeCarrousel: (index: number) => void;
+}
+
+function Carousel({
+  currentPage,
+  setCurrentPage,
+  sliderRef,
+  changeCarrousel
+}: CarouselProps) {
   return (
     <div className="flex w-full h-full my-auto">
-      <CenterMode></CenterMode>
+      <CenterMode
+      currentPage={currentPage}
+      setCurrentPage={setCurrentPage}
+      sliderRef={sliderRef}
+      changeCarrousel={changeCarrousel}
+      ></CenterMode>
     </div>
   );
 }

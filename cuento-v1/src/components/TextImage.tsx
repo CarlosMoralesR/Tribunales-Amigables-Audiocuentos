@@ -4,6 +4,8 @@ interface TextImageProps {
   currentPage: number;
   setCurrentPage: (page: number) => void;
   bgColor: string;
+  sliderRef: any;
+  changeCarrousel: (index: number) => void;
 }
 
 function TextImage({
@@ -12,6 +14,8 @@ function TextImage({
   currentPage,
   setCurrentPage,
   bgColor,
+  sliderRef,
+  changeCarrousel
 }: TextImageProps) {
   const { text, image } = pageData;
 
@@ -25,6 +29,7 @@ function TextImage({
         onClick={() => {
           if (currentPage !== 0) {
             setCurrentPage(currentPage - 1);
+            changeCarrousel(currentPage - 1)
           }
         }}
         disabled={currentPage === 0}
@@ -97,6 +102,7 @@ function TextImage({
         onClick={() => {
           if (currentPage !== arrayLength - 1) {
             setCurrentPage(currentPage + 1);
+            changeCarrousel(currentPage + 1)
           }
         }}
         disabled={currentPage === arrayLength - 1}
