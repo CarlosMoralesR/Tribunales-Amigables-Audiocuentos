@@ -18,7 +18,20 @@ import TextReader from "./TextReader";
 import TextImage from "./TextImage";
 import { useState } from "react";
 
-function Story() {
+interface StoryProps {
+  currentPage: number;
+  setCurrentPage: (page: number) => void;
+  sliderRef: any;
+  changeCarrousel: (index: number) => void;
+}
+
+function Story({
+  currentPage,
+  setCurrentPage,
+  sliderRef,
+  changeCarrousel
+}: StoryProps) {
+
   const pageDataArray = [
     {
       pageNumber: 1,
@@ -392,7 +405,7 @@ function Story() {
     },
   ];
   const [bgColor, setBgColor] = useState("");
-  const [currentPage, setCurrentPage] = useState(0);
+  // const [currentPage, setCurrentPage] = useState(0);
 
   const changeBgColor = (newBgColor: string) => {
     setBgColor(newBgColor);
@@ -405,6 +418,8 @@ function Story() {
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         bgColor={bgColor}
+        sliderRef={sliderRef}
+        changeCarrousel={changeCarrousel}
       ></TextImage>
       <TextReader
         text={
@@ -418,6 +433,7 @@ function Story() {
         onBgChange={changeBgColor}
         currentPage={pageDataArray[currentPage].pageNumber}
         voice={pageDataArray[currentPage].voice}
+        setCurrentPage={setCurrentPage}
       />
     </>
   );

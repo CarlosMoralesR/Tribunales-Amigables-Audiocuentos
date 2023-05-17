@@ -4,6 +4,7 @@ interface TextReaderProps {
   text: string;
   onBgChange: (newBgColor: string) => void;
   currentPage: number;
+  setCurrentPage: (page: number) => void;
   voice: number;
 }
 

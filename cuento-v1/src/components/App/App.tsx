@@ -3,13 +3,21 @@ import Carousel from "../Carousel";
 import Story from "../Story";
 import portada from "../../assets/portada.png";
 import { useState } from "react";
+import { useRef } from 'react';
 
 function App() {
   const [showStory, setShowStory] = useState(false);
+  const [currentPage, setCurrentPage] = useState(0);
 
   function onButtonClick() {
     setShowStory(!showStory);
   }
+  const sliderRef = useRef();
+  function changeCarrousel(index: number){
+    sliderRef.current.slickGoTo(index);
+    setCurrentPage
+  }
+
   return (
     <>
       {!showStory ? (
@@ -49,10 +57,20 @@ function App() {
       {showStory ? (
         <div className="h-screen flex flex-col">
           <div className="h-5/6 flex flex-col p-1 bg-[#f5d7b0]">
-            <Story></Story>
+            <Story
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            sliderRef={sliderRef}
+            changeCarrousel={changeCarrousel}
+            ></Story>
           </div>
           <div className="h-1/6 flex bg-gray-50">
-            <Carousel />
+            <Carousel 
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            sliderRef={sliderRef}
+            changeCarrousel={changeCarrousel}
+            />
           </div>
         </div>
       ) : (
