@@ -3,7 +3,8 @@ import Carousel from "../Carousel";
 import Story from "../Story";
 import portada from "../../assets/portada.png";
 import { useState } from "react";
-import { useRef } from 'react';
+import { useRef } from "react";
+import Slider from "react-slick";
 
 function App() {
   const [showStory, setShowStory] = useState(false);
@@ -12,10 +13,11 @@ function App() {
   function onButtonClick() {
     setShowStory(!showStory);
   }
-  const sliderRef = useRef();
-  function changeCarrousel(index: number){
-    sliderRef.current.slickGoTo(index);
-    setCurrentPage
+
+  const sliderRef = useRef<Slider>();
+  function changeCarrousel(index: number) {
+    sliderRef.current!.slickGoTo(index);
+    // setCurrentPage;
   }
 
   return (
@@ -58,18 +60,18 @@ function App() {
         <div className="h-screen flex flex-col">
           <div className="h-5/6 flex flex-col p-1 bg-[#f5d7b0]">
             <Story
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-            sliderRef={sliderRef}
-            changeCarrousel={changeCarrousel}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+              sliderRef={sliderRef}
+              changeCarrousel={changeCarrousel}
             ></Story>
           </div>
           <div className="h-1/6 flex bg-gray-50">
-            <Carousel 
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-            sliderRef={sliderRef}
-            changeCarrousel={changeCarrousel}
+            <Carousel
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+              sliderRef={sliderRef}
+              changeCarrousel={changeCarrousel}
             />
           </div>
         </div>
