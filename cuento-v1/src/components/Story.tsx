@@ -29,9 +29,8 @@ function Story({
   currentPage,
   setCurrentPage,
   sliderRef,
-  changeCarrousel
+  changeCarrousel,
 }: StoryProps) {
-
   const pageDataArray = [
     {
       pageNumber: 1,
@@ -412,6 +411,13 @@ function Story({
   };
   return (
     <>
+      <a href="https://app.prevencionamigable.com.mx/juegos/otros/games.html">
+        <div className="w-full flex justify-end my-auto">
+          <div className="flex items-center justify-center absolute w-12 h-12 rounded-full bg-green-500 text-black font-semibold">
+            <span className="material-icons">home</span>
+          </div>
+        </div>
+      </a>
       <TextImage
         pageData={pageDataArray[currentPage]}
         arrayLength={pageDataArray.length}
