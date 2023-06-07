@@ -41,10 +41,10 @@ function App() {
                 alt="La llave y el candado de Itzel"
               />
               <div className="my-5 text-center">
-                <h1 className="text-sm font-extrabold">
+                <h1 className="text-sm font-semibold">
                   ¡Vamos a conocer a Itzel y lo que le ocurrió!
                 </h1>
-                <p className="text-sm font-semibold">
+                <p className="text-sm">
                   Puedes leer el texto del cuento o si quieres puedes
                   seleccionar el botón verde para escuchar a mi amigo el
                   narrador. Si seleccionas los botones morados irás continuando
