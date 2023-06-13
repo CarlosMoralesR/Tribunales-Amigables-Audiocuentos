@@ -15,7 +15,7 @@ function TextImage({
   setCurrentPage,
   bgColor,
   sliderRef,
-  changeCarrousel
+  changeCarrousel,
 }: TextImageProps) {
   const { text, image } = pageData;
 
@@ -29,7 +29,7 @@ function TextImage({
         onClick={() => {
           if (currentPage !== 0) {
             setCurrentPage(currentPage - 1);
-            changeCarrousel(currentPage - 1)
+            changeCarrousel(currentPage - 1);
           }
         }}
         disabled={currentPage === 0}
@@ -102,7 +102,7 @@ function TextImage({
         onClick={() => {
           if (currentPage !== arrayLength - 1) {
             setCurrentPage(currentPage + 1);
-            changeCarrousel(currentPage + 1)
+            changeCarrousel(currentPage + 1);
           }
         }}
         disabled={currentPage === arrayLength - 1}
