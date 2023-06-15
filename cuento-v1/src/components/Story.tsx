@@ -48,7 +48,7 @@ function Story({
           en nuestra imaginación pero que nos alejan de situaciones que
           pueden ponernos en peligro o ayudarnos a estar a salvo.`,
       specialText: "",
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 2,
@@ -67,7 +67,7 @@ function Story({
           Ahora que ya conoces esto ¡Comencemos con el cuento!`,
       specialText: "",
       image: pagina2,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 3,
@@ -78,7 +78,7 @@ function Story({
           mismo tiempo que se preparaba para ir a la escuela.`,
       specialText: "",
       image: pagina3,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 4,
@@ -99,7 +99,7 @@ function Story({
           mucho y que puedes confiar en mí`,
       specialText: "",
       image: pagina4,
-      voice: 4,
+      voice: 1,
     },
     {
       pageNumber: 5,
@@ -110,7 +110,7 @@ function Story({
           poner un candado para cerrar el paso a la
           comunicación con Montse?`,
       image: pagina5,
-      voice: 9,
+      voice: 1,
     },
     {
       pageNumber: 6,
@@ -126,7 +126,7 @@ function Story({
           familia, tienen la responsabilidad de ayudar a Itzel y hacer lo
           necesario para que su compañero ya no la molestara.`,
       specialText: "",
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 7,
@@ -136,7 +136,7 @@ function Story({
           - Itzel ¡Qué fea te ves! Mejor regresa a tu casa porque si te
           veo en el salón después del recreo te voy a pegar-`,
       specialText: "",
-      voice: 4,
+      voice: 1,
     },
     {
       pageNumber: 8,
@@ -145,7 +145,7 @@ function Story({
           lo que le pide su compañero que la molesta? o ¿Debe utilizar
           el candado para cerrarle el paso a Juan y pedir ayuda a una
           persona adulta?`,
-      voice: 9,
+      voice: 1,
     },
     {
       pageNumber: 9,
@@ -163,7 +163,7 @@ function Story({
           `,
       specialText: ``,
       image: pagina9,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 10,
@@ -176,7 +176,7 @@ function Story({
           alguien te molestara?`,
       specialText: ``,
       image: pagina10,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 11,
@@ -188,7 +188,7 @@ function Story({
           a respetar a sus compañeras y compañeros.`,
       specialText: ``,
       image: pagina11,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 12,
@@ -205,7 +205,7 @@ function Story({
           quería decir.`,
       specialText: ``,
       image: pagina12,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 13,
@@ -224,7 +224,7 @@ function Story({
           quisiera hacerle daño.`,
       specialText: ``,
       image: pagina13,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 14,
@@ -232,7 +232,7 @@ function Story({
       specialText: `¿Itzel debería utilizar su llave para abrir la puerta de
           la confianza y aceptar la invitación para hablar de algo a
           escondidas? o ¿Debe rechazar esa invitación con su candado?`,
-      voice: 9,
+      voice: 1,
     },
     {
       pageNumber: 15,
@@ -244,7 +244,7 @@ function Story({
           Itzel decidió negarse a la invitación de don Chepo, se alejó de
           él y esperó dentro de la escuela y a la vista de sus maestros.`,
       specialText: ``,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 16,
@@ -255,14 +255,14 @@ function Story({
           Eso ayudó a que otras niñas y niños se pusieran a salvo.`,
       specialText: ``,
       image: pagina16,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 17,
       text: ``,
       specialText: ``,
       image: pagina17,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 18,
@@ -281,7 +281,7 @@ function Story({
           de descansar. 
           `,
       specialText: ``,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 19,
@@ -295,14 +295,14 @@ function Story({
           le decía que era un juego y que al final se ganaría un
           regalo si guardaba el secreto.`,
       specialText: ``,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 20,
       text: ``,
       specialText: ``,
       image: pagina20,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 21,
@@ -312,7 +312,7 @@ function Story({
           le guste y la haga sentir mal? o ¿Debe utilizar su candado
           para cerrar la puerta y rechazar ese momento que no le
           agrada?`,
-      voice: 9,
+      voice: 1,
     },
     {
       pageNumber: 22,
@@ -323,7 +323,7 @@ function Story({
           situación en la que no están respetando su cuerpo!
           `,
       specialText: ``,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 23,
@@ -335,7 +335,7 @@ function Story({
           `,
       specialText: ``,
       image: pagina23,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 24,
@@ -353,7 +353,7 @@ function Story({
           `,
       specialText: ``,
       image: pagina24,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 25,
@@ -369,7 +369,7 @@ function Story({
           personas que te contesten te pueden ayuda
           `,
       specialText: ``,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 26,
@@ -387,20 +387,20 @@ function Story({
           
           `,
       specialText: ``,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 27,
       text: `¡De Boca en Boca, a mi Cuerpo Nadie lo Toca!`,
       specialText: ``,
       image: pagina27,
-      voice: 4,
+      voice: 0,
     },
     {
       pageNumber: 28,
       text: `Fin.`,
       specialText: ``,
-      voice: 4,
+      voice: 0,
     },
   ];
   const [bgColor, setBgColor] = useState("");
