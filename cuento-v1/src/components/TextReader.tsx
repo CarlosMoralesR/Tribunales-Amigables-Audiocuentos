@@ -14,14 +14,23 @@ function TextReader(props: TextReaderProps) {
   const [utterance, setUtterance] = useState<SpeechSynthesisUtterance | null>(
     null
   );
+  let spanishLatinVoices: SpeechSynthesisVoice[] = [];
 
   useEffect(() => {
+    
     const synth = window.speechSynthesis;
-    window.speechSynthesis.onvoiceschanged = () => {
-      utterance.voice = synth.getVoices()[props.voice];
-    };
-    const utterance = new SpeechSynthesisUtterance(props.text);
-    utterance.voice = synth.getVoices()[props.voice];
+
+  window.speechSynthesis.onvoiceschanged = () => {
+    const voices = synth.getVoices();
+    spanishLatinVoices = voices.filter(voice => voice.lang === 'es-MX');
+    utterance.voice = spanishLatinVoices[props.voice];
+  };
+
+  const utterance = new SpeechSynthesisUtterance(props.text);
+  utterance.lang = 'es-MX';
+  const voices = synth.getVoices();
+  spanishLatinVoices = voices.filter(voice => voice.lang === 'es-MX');
+  utterance.voice = spanishLatinVoices[props.voice];
     // aumentar velocidad
     // utterance.rate = 1.2;
     setSynth(synth);
