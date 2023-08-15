@@ -71,9 +71,9 @@ function TextImage({
           )}
           <div className="overflow-auto">
             <p
-              className={`w-full h-full text-sm overflow-auto md:text-base lg:text-lg xl:text-xl  ${
+              className={`w-full h-full text-sm overflow-auto md:text-base lg:text-lg  ${
                 image ? "xl:text-xl" : "xl:text-2xl"
-              }`}
+              } ${image && text.length > 490 ? "xl:text-xl" : "xl:text-3xl"}`}
               style={{ backgroundColor: bgColor }}
             >
               {text}
