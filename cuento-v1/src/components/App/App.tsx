@@ -23,8 +23,8 @@ function App() {
   return (
     <>
       {!showStory ? (
-        <div className="h-screen flex flex-col justify-center items-center p-5 bg-gray-100">
-          <div className="flex flex-col items-center justify-center h-screen w-96 p-5 rounded-xl shadow-2xl shadow-slate-400 border-r-8 border-b-4 border-gray-300 bg-[#f5d7b0]">
+        <div className="min-h-screen flex items-center justify-center p-5 bg-gray-100">
+          <div className="flex flex-col items-center justify-center w-96 p-5 rounded-xl shadow-2xl shadow-slate-400 border-r-8 border-b-4 border-gray-300 bg-[#f5d7b0]">
             <div className="h-full w-full flex flex-col justify-center items-center">
               <h1 className="text-2xl text-center font-bold text-blue-400">
                 La llave y el candado de Itzel
